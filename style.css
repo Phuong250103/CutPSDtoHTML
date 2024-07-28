@@ -1,0 +1,12 @@
+.header {
+  height: 300px;
+}
+.header_logo {
+  background-color: greenyellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=style.css.map */
