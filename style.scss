@@ -1,13 +1,71 @@
-@mixin flexbox() {
-    background-color: greenyellow;
+$primary-color: #ffc87a;
+$text-color: #1a2b5f;
+
+@mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
 }
 .header{
     height: 300px;
     &_logo{
-        @include flexbox();
+        @include flex();
+    }
+}
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1210px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.header{
+    padding-top: 4rem;
+    &_inner {
+        @include flex(center, space-between);
+    }
+    &_menu{
+        &-list{
+            @include flex(center);
+        }
+        &-item{
+            margin-left: 5rem;
+            &:last-child {
+                margin-left: 5rem;
+            }
+        }
+        &-link{
+            font-size: 1.6rem;
+            color: $text-color;
+            transition: color 0.25s linear, border 0.25s linear;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        &-login{
+            padding: 1.5rem 2.5rem;
+            display: inline-block;
+            border: 1px solid;
+            border-radius: 2.5rem;
+        }
+    }
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: $text-color;
+    &_text{
+        color: $primary-color;
     }
 }
