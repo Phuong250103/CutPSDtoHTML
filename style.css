@@ -1,3 +1,9 @@
+@charset "UTF-8";
+img {
+  display: block;
+  max-width: 100%; /* cách chỉnh ảnh nhỏ lại */
+}
+
 .header {
   height: 300px;
 }
@@ -6,6 +12,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 a {
@@ -16,6 +23,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #1a2b5f;
   line-height: 1.4;
+  padding-bottom: 200px;
 }
 
 .wrapper {
@@ -38,12 +46,14 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
+  flex-direction: row;
 }
 .header_menu-list {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  flex-direction: row;
 }
 .header_menu-item {
   margin-left: 5rem;
@@ -77,6 +87,7 @@ body {
 
 .banner {
   padding-top: 1.5rem;
+  padding-bottom: 15rem;
   max-width: 80rem;
   margin: 0 auto;
   text-align: center;
@@ -118,6 +129,56 @@ body {
 }
 .btn--primary {
   background-color: #ffc87a;
+}
+.btn--primary.has-shadow {
+  box-shadow: 0 10px 35px -5px #ffc87a;
+}
+
+.category_list {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.category_item {
+  width: calc(25% - 22.5px);
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.category_item:first-child {
+  box-shadow: 0 20px 35px -5px rgba(255, 151, 195, 0.25);
+}
+.category_item:nth-child(2) {
+  box-shadow: 0 20px 35px -5px rgba(255, 112, 109, 0.25);
+}
+.category_item:nth-last-child(2) {
+  box-shadow: 0 20px 35px -5px rgba(133, 152, 255, 0.25);
+}
+.category_item:last-child {
+  box-shadow: 0 20px 35px -5px rgba(255, 200, 195, 0.25);
+}
+.category_image {
+  border-radius: inherit;
+  margin-bottom: 4rem;
+}
+.category_name {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.category_details {
+  font-size: 1, 4rem;
+  color: #c6cad7;
+  margin-top: auto;
+}
+.category_details i {
+  margin-left: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

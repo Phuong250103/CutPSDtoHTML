@@ -1,11 +1,17 @@
 $primary-color: #ffc87a;
 $text-color: #1a2b5f;
+$text-gray: #c6cad7;
 
-@mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
+img{
+    display: block;
+    max-width: 100%; /* cách chỉnh ảnh nhỏ lại */  
+}
+@mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap, $dir: row) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
     flex-wrap: $wrap;
+    flex-direction: $dir;
 }
 .header{
     height: 300px;
@@ -21,6 +27,7 @@ body {
     font-family: "Poppins", sans-serif;
     color: $text-color;
     line-height: 1.4;
+    padding-bottom: 200px;
 }
 .wrapper {
     max-width: 1440px;
@@ -73,6 +80,7 @@ body {
 }
 .banner{
     padding-top: 1.5rem;
+    padding-bottom: 15rem;
     max-width: 80rem;
     margin: 0 auto;
     text-align: center;
@@ -112,5 +120,56 @@ body {
     }
     &--primary{
         background-color: $primary-color;
+        &.has-shadow{
+            box-shadow: 0 10px 35px -5px $primary-color;
+        }
     }
+
+}
+.category{
+    &_list{
+        @include flex(stretch, space-between, wrap )
+    }
+    &_item{
+        width: calc(25% - 22.5px);
+        padding: 0.5rem;
+        background-color: white;
+        border-radius: 20px;
+        @include flex(stretch, flex-start, nowrap,column);
+        &:first-child{
+            box-shadow: 0 20px 35px -5px rgba(255, 151, 195, 0.25);
+        }
+        &:nth-child(2){
+            box-shadow: 0 20px 35px -5px rgba(255, 112, 109, 0.25);
+        }
+        &:nth-last-child(2){
+            box-shadow: 0 20px 35px -5px rgba(133, 152, 255, 0.25);
+        }
+        &:last-child{
+            box-shadow: 0 20px 35px -5px rgba(255, 200, 195, 0.25);
+        }
+    }
+    &_image{
+        border-radius: inherit;
+        // object-fit: cover;
+        // height: 23rem;
+        // width: 100%;
+        margin-bottom: 4rem;
+    }
+    &_name{
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+        // white-space: nowrap; /* cùng 1 dòng */
+        // overflow: hidden; /*thu gọn*/
+        // text-overflow: ellipsis; /*hiện 3 chấm */
+    }
+    &_details{
+        font-size: 1,4rem;
+        color: $text-gray;
+        margin-top: auto;
+        i{
+            margin-left: 1rem;
+        }
+    }
+
 }
