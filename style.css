@@ -181,4 +181,68 @@ body {
   margin-left: 1rem;
 }
 
+.feature {
+  padding-top: 18rem;
+}
+.feature_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rem;
+}
+.feature_item:nth-child(odd) { /* odd chi so thu tu le */ }
+.feature_item:nth-child(odd) .feature_infor {
+  padding-left: 10rem;
+}
+.feature_item:nth-child(even) { /* even chi so thu tu chan */
+  flex-direction: row-reverse;
+}
+.feature_item:nth-child(even) .feature_infor {
+  padding-right: 10rem;
+}
+.feature_image, .feature_info {
+  width: 50%;
+}
+.feature_title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.feature_desc {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.feature-intro_item {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+.feature-intro_item--circle {
+  text-decoration: none;
+  position: relative;
+  padding-left: 2rem;
+}
+.feature-intro_item--circle:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4rem;
+  background-color: #00aefd;
+  transform: translateY(-50%);
+}
+.feature-intro_item--circle:nth-child(2):before {
+  background-color: #ffc87a;
+}
+.feature-intro_item--circle:nth-child(3):before {
+  background-color: green;
+}
+.feature-intro_item--circle:nth-child(4):before {
+  background-color: aqua;
+}
+
 /*# sourceMappingURL=style.css.map */
