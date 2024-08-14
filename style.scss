@@ -238,4 +238,63 @@ body {
             }
         }
     }
+    &-best {
+        &_icon{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 4px;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: aqua;
+            position: relative;
+            &--red{
+                color: red;
+            }
+            &--green{
+                color: green;
+            }
+            &:after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                background-color: currentColor;
+                opacity: 0.25;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+        &_title{
+            font-weight: 600;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        &_desc {
+            font-weight: 300;
+        }
+        &_list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &_item {
+            width: calc(50% - 3rem);
+            margin-bottom: 3rem;
+        }
+    }
+}
+.text-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &--2{
+        -webkit-line-clamp: 2; /* so dong muon thu gon thanh */
+    }
 }

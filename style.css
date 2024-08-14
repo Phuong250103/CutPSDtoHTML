@@ -244,5 +244,63 @@ body {
 .feature-intro_item--circle:nth-child(4):before {
   background-color: aqua;
 }
+.feature-best_icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 4px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: aqua;
+  position: relative;
+}
+.feature-best_icon--red {
+  color: red;
+}
+.feature-best_icon--green {
+  color: green;
+}
+.feature-best_icon:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: currentColor;
+  opacity: 0.25;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.feature-best_title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.feature-best_desc {
+  font-weight: 300;
+}
+.feature-best_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.feature-best_item {
+  width: calc(50% - 3rem);
+  margin-bottom: 3rem;
+}
+
+.text-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-clamp--2 {
+  -webkit-line-clamp: 2; /* so dong muon thu gon thanh */
+}
 
 /*# sourceMappingURL=style.css.map */
