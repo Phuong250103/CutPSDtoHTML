@@ -353,7 +353,12 @@ body {
   width: calc(25% - 22.5px);
 }
 
+.subscribe {
+  margin-bottom: 5rem;
+}
 .subscribe_container {
+  padding-bottom: 8rem;
+  border-bottom: 2px solid;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -401,6 +406,37 @@ body {
 .subscribe_social i {
   margin-left: 3rem;
   font-size: 2rem;
+}
+
+.footer {
+  margin-bottom: 1rem;
+}
+.footer_container {
+  padding-bottom: 5rem;
+  border-bottom: 1px solid;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.footer_item {
+  width: 25%;
+}
+.footer_link {
+  color: #1a2b5f;
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  width: fit-content; /*khi ree chuot vao link chi hien phan phan chu duoc bao boc */
+}
+
+.end_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=style.css.map */

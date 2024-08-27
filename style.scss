@@ -339,7 +339,10 @@ body {
     }
 }
 .subscribe {
+    margin-bottom: 5rem;
     &_container {
+        padding-bottom: 8rem;
+        border-bottom: 2px solid;
         @include flex(flex-start ,space-between )
     }
     &_info,
@@ -382,4 +385,27 @@ body {
         margin-left: 3rem;
         font-size: 2rem;
     }
+}
+.footer {
+    margin-bottom: 1rem;
+    &_container {
+        padding-bottom: 5rem;
+        border-bottom: 1px solid;
+        @include flex(flex-start, space-between);
+    }
+    &_item {
+        width: 25%;
+    }
+    &_link {
+        color: $text-color;
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: 1.5rem;
+        width: fit-content; /*khi ree chuot vao link chi hien phan phan chu duoc bao boc */
+    }
+}
+.end {
+    &_container {
+        @include flex(flex-start, space-between)
+    } 
 }
