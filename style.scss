@@ -14,7 +14,7 @@ img{
     flex-direction: $dir;
 }
 .header{
-    height: 300px;
+    height: 100px;
     &_logo{
         @include flex();
     }
@@ -159,9 +159,9 @@ body {
     &_name{
         font-size: 2.5rem;
         margin-bottom: 2.5rem;
-        // white-space: nowrap; /* cùng 1 dòng */
-        // overflow: hidden; /*thu gọn*/
-        // text-overflow: ellipsis; /*hiện 3 chấm */
+        white-space: nowrap; /* cùng 1 dòng */
+        overflow: hidden; /*thu gọn*/
+        text-overflow: ellipsis; /*hiện 3 chấm */
     }
     &_details{
         font-size: 1,4rem;
@@ -177,7 +177,7 @@ body {
     &_item{
         display: flex;
         align-items: center;
-        margin-bottom: 15rem;
+        margin-bottom: 10rem;
         &:nth-child(odd) { /* odd chi so thu tu le */
             .feature_infor {
                 padding-left: 10rem;
@@ -299,7 +299,7 @@ body {
     }
 }
 .partner{
-    margin-bottom: 19rem;
+    margin-bottom: 14rem;
     &_container{
         max-width: 83rem;
         text-align: center;
@@ -408,4 +408,153 @@ body {
     &_container {
         @include flex(flex-start, space-between);
     } 
+}
+@media screen and (max-width: 1023px) {
+    .banner {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+        &_heading {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        &_desc {
+            font-size: 1.6rem;
+        }
+        &_buttons > .btn {
+            font-size: 1.2rem;
+        }
+    }
+    .category {
+        &_item {
+            width: calc(50% - 22.5px);
+            margin-bottom: 2rem;
+        }
+        &_name {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        &_image {
+            margin-bottom: 1.5rem;
+        }
+    }
+    .feature {
+        padding-top: 10rem;
+        &_item {
+            margin-bottom: 4rem;
+            flex-direction: column;
+            &:nth-child(even) {
+                flex-direction: column;
+                .feature_infor {
+                    padding: 0;
+                }
+            }
+            &:nth-child(odd) .feature_infor {
+               padding: 0;
+            }
+        }
+        &_image,
+        &_info {
+            width: 100%;
+        }
+        &_image img {
+            margin: 0 auto 5rem;
+        }
+    }
+    .partner {
+        margin-bottom: 5rem;
+        &_title {
+            padding-bottom: 3.5rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+    .subscribe {
+        &_container {
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+            flex-direction: column;
+        }
+        &_title {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        &_info {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 767px) {   /*max-width dungf trong TH code tren manf laptop trc sau do chinhr veef nhor hown */
+    .header_menu {
+        display: none;
+    }
+    .partner {
+        &_list {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &_item {
+            width: 50%;
+            margin-bottom: 1.5rem;
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+    .connect {
+        margin-bottom: 5rem;
+        &_list {
+            flex-wrap: wrap;
+        }
+        &_item {
+            width: calc(50% - 1rem);
+            margin-bottom: 2rem;
+        }
+    }
+    .subscribe {
+        &_container {
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+            flex-direction: column;
+        }
+        &_title {
+            width: 100%;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        &_info {
+            width: 100%;
+        }
+        &_input,
+        &_button {
+            font-size: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 424px) {
+    .banner {
+        &_heading {
+            font-size: 3rem;
+        }
+        &_buttons > .btn {
+            font-size: 0.7rem;
+        }
+    }
+    .subscribe {
+        &_container {
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+            flex-direction: column;
+        }
+        &_title {
+            width: 100%;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        &_info {
+            width: 100%;
+        }
+        &_input,
+        &_button {
+            font-size: 0.8rem;
+        }
+    }
 }

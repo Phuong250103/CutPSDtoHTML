@@ -5,7 +5,7 @@ img {
 }
 
 .header {
-  height: 300px;
+  height: 100px;
 }
 .header_logo {
   display: flex;
@@ -171,6 +171,9 @@ body {
 .category_name {
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
+  white-space: nowrap; /* cùng 1 dòng */
+  overflow: hidden; /*thu gọn*/
+  text-overflow: ellipsis; /*hiện 3 chấm */
 }
 .category_details {
   font-size: 1, 4rem;
@@ -187,7 +190,7 @@ body {
 .feature_item {
   display: flex;
   align-items: center;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 }
 .feature_item:nth-child(odd) { /* odd chi so thu tu le */ }
 .feature_item:nth-child(odd) .feature_infor {
@@ -304,7 +307,7 @@ body {
 }
 
 .partner {
-  margin-bottom: 19rem;
+  margin-bottom: 14rem;
 }
 .partner_container {
   max-width: 83rem;
@@ -437,6 +440,141 @@ body {
   justify-content: space-between;
   flex-wrap: nowrap;
   flex-direction: row;
+}
+
+@media screen and (max-width: 1023px) {
+  .banner {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  .banner_heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .banner_desc {
+    font-size: 1.6rem;
+  }
+  .banner_buttons > .btn {
+    font-size: 1.2rem;
+  }
+  .category_item {
+    width: calc(50% - 22.5px);
+    margin-bottom: 2rem;
+  }
+  .category_name {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .category_image {
+    margin-bottom: 1.5rem;
+  }
+  .feature {
+    padding-top: 10rem;
+  }
+  .feature_item {
+    margin-bottom: 4rem;
+    flex-direction: column;
+  }
+  .feature_item:nth-child(even) {
+    flex-direction: column;
+  }
+  .feature_item:nth-child(even) .feature_infor {
+    padding: 0;
+  }
+  .feature_item:nth-child(odd) .feature_infor {
+    padding: 0;
+  }
+  .feature_image, .feature_info {
+    width: 100%;
+  }
+  .feature_image img {
+    margin: 0 auto 5rem;
+  }
+  .partner {
+    margin-bottom: 5rem;
+  }
+  .partner_title {
+    padding-bottom: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+  .subscribe_container {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    flex-direction: column;
+  }
+  .subscribe_title {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .subscribe_info {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) { /*max-width dungf trong TH code tren manf laptop trc sau do chinhr veef nhor hown */
+  .header_menu {
+    display: none;
+  }
+  .partner_list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .partner_item {
+    width: 50%;
+    margin-bottom: 1.5rem;
+  }
+  .partner_item img {
+    margin: 0 auto;
+  }
+  .connect {
+    margin-bottom: 5rem;
+  }
+  .connect_list {
+    flex-wrap: wrap;
+  }
+  .connect_item {
+    width: calc(50% - 1rem);
+    margin-bottom: 2rem;
+  }
+  .subscribe_container {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    flex-direction: column;
+  }
+  .subscribe_title {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .subscribe_info {
+    width: 100%;
+  }
+  .subscribe_input, .subscribe_button {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 424px) {
+  .banner_heading {
+    font-size: 3rem;
+  }
+  .banner_buttons > .btn {
+    font-size: 0.7rem;
+  }
+  .subscribe_container {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    flex-direction: column;
+  }
+  .subscribe_title {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .subscribe_info {
+    width: 100%;
+  }
+  .subscribe_input, .subscribe_button {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
